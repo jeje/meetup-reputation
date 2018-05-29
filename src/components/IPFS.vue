@@ -1,8 +1,15 @@
 <template>
-  <div class="ipfs">
-    <p>Node status: {{ ipfsOnline }}</p>
-    <p>Node ID: {{ ipfsID }}</p>
-  </div>
+  <v-card>
+    <v-card-title primary-title>
+      <div>
+        <h3 class="headline mb-0">IPFS</h3>
+        <div>
+          <p>Node status: {{ ipfsOnline }}</p>
+          <p>Node ID: {{ ipfsID }}</p>
+        </div>
+      </div>
+    </v-card-title>
+  </v-card>
 </template>
 
 <script>
@@ -19,37 +26,8 @@ export default {
       return this.$ipfs.id()
     }
   }
-  /*
-  beforeCreate () {
-    console.log('registerWeb3 Action dispatched from IPFS.vue')
-    this.$store.dispatch('registerIPFS')
-  },
-  computed: {
-    ipfs () {
-      return this.$store.state.ipfs
-    },
-    ipfsOnline () {
-      return this.ipfs.isOnline ? 'online' : 'offline'
-    }
-  }
-  */
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>
