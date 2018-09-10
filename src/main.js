@@ -9,7 +9,7 @@ import Vuetify from 'vuetify'
 import IPFS from './plugins/IPFSPlugin'
 import AppPlugin from './plugins/AppPlugin'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = process.env.NODE_ENV === 'production'
 
 Vue.use(AsyncComputed)
 Vue.use(Vuetify)

@@ -1,8 +1,11 @@
 import IPFS from '../services/ipfs'
+import Logger from 'logplease'
 
 export default {
   install: async function (Vue) {
-    console.log('Installing IPFS ...')
+    const logger = Logger.create('IPFSPlugin')
+
+    logger.info('Installing IPFS ...')
 
     let ipfsInstance = IPFS.init()
 
@@ -18,6 +21,6 @@ export default {
       }
     }
 
-    console.log('IPFS installed ...')
+    logger.info('IPFS installed ...')
   }
 }

@@ -1,14 +1,11 @@
 <template>
   <v-card>
-    <v-card-title primary-title>
-      <div>
-        <h3 class="headline mb-0">IPFS</h3>
-        <div>
-          <p>Node status: {{ ipfsOnline }}</p>
-          <p>Node ID: {{ ipfsID }}</p>
-        </div>
-      </div>
-    </v-card-title>
+    <v-card-title primary-title><h3 class="headline mb-0">IPFS</h3></v-card-title>
+    <v-divider />
+    <v-card-text>
+      <p>Node status: {{ ipfsOnline }}</p>
+      <p>Node ID: {{ ipfsID }}</p>
+    </v-card-text>
   </v-card>
 </template>
 
@@ -25,6 +22,9 @@ export default {
     async ipfsID () {
       return this.$ipfs.id()
     }
+  },
+  mounted: () => {
+    console.log('===> IPFS', this.$ipfs)
   }
 }
 </script>

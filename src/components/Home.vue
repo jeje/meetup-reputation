@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md>
     <v-layout row wrap>
-      <v-flex xs12 class="text-xs-center">
+      <v-flex xs12>
         <organizations/>
         <!-- <router-link to="/purchase-orders">Purchase Orders</router-link> -->
       </v-flex>
@@ -19,7 +19,6 @@
 import Metamask from '@/components/Metamask'
 import IPFS from '@/components/IPFS'
 import Organizations from '@/components/Organizations'
-// import IPFS from '../util/ipfs'
 
 export default {
   name: 'Home',

@@ -18,7 +18,7 @@
     "logplease": "^1.2.14",
     "material-design-icons-iconfont": "^3.0.3",
     "orbit-db": "^0.19.7",
-    "orbit-db-docstore": "^1.4.0",
+    "orbit-db-counterstore": "github:jeje/orbit-db-counterstore",
     "vue": "^2.5.2",
     "vue-async-computed": "^3.3.1",
     "vue-router": "^3.0.1",
